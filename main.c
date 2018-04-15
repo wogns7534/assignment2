@@ -102,6 +102,17 @@ void blockcmp(void)
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(void)
 {
+	printf("Date Compare\n");
+
+	if(time1->tm_mon == time2->tm_mon){
+		if(time1->tm_mday > time2->tm_mday)
+			printf("Text1 is bigger\n");
+			else
+			printf("Text2 is bigger\n");
+		}
+	else if(time1->tm_mon > time2->tm_mon)
+		printf("Text 1 is bigger\n");
+		else printf("Text2 is bigger\n");
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
