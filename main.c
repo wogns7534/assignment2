@@ -80,8 +80,14 @@ void sizecmp(void)
 
    if((int)stat1.st_size > (int)stat2.st_size)
    printf("text1 is bigger\n");
-   else
+         else{
+        if((int)stat1.st_size == (int)stat2.st_size)
+{
+                 printf("The two file sizes are the same\n");
+}
    printf("text2 is bigger\n");
+
+        }
 
    return;
 }
@@ -93,11 +99,17 @@ void blockcmp(void)
 
    if((int)stat1.st_blocks > (int)stat2.st_blocks)
         printf("text1 is bigger\n");
-        else
+        else{
+
+           if((int)stat1.st_blocks == (int)stat2.st_blocks)
+                { printf("The two file block sizes are the same\n");
+        }
         printf("text2 is bigger\n");
+        }
 
         return;
 }
+
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(void)
