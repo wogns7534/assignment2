@@ -105,14 +105,15 @@ void datecmp(void)
 	printf("Date Compare\n");
 
 	if(time1->tm_mon == time2->tm_mon){
-		if(time1->tm_mday > time2->tm_mday)
-			printf("Text1 is bigger\n");
-			else
-			printf("Text2 is bigger\n");
-		}
-	else if(time1->tm_mon > time2->tm_mon)
-		printf("Text 1 is bigger\n");
-		else printf("Text2 is bigger\n");
+		if(time1->tm_mday > time2->tm_mday){
+			printf("Text1 is latest\n");
+		}else if(time2->tm_mday > time1->tm_mday) printf("Text2 is latest\n");
+			else printf("Text1 & Text2 same date.\n");
+	}
+	else if(time1->tm_mon > time2->tm_mon){
+		printf("Text 1 is lastest\n");
+		}else if(time2->tm_mon > time1->tm_mon) printf("Text2 is lastest\n");
+			else printf("Text1 & Text2 same date.\n");
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
@@ -121,12 +122,13 @@ void timecmp(void)
 	printf("time Compare\n");
 
 	if(time1->tm_hour == time2->tm_hour){
-		if(time1->tm_min > time2->tm_min)
-			printf("Text1 is bigger\n");
-			else
-			printf("Text2 is bigger\n");
-		}
-	else if(time1->tm_hour > time2->tm_hour)
-		printf("Text 1 is bigger\n");
-		else printf("Text2 is bigger\n");
+		if(time1->tm_min > time2->tm_min){
+			printf("Text1 is latest\n");
+		}else if(time2->tm_min > time1->tm_min) printf("Text2 is latest\n");
+		else printf("Text1 & Text2 same time.\n");
+	}
+	else if(time1->tm_hour > time2->tm_hour){
+		printf("Text 1 is lastest\n");
+	}else if(time2->tm_hour > time1->tm_hour) printf("Text2 is lastest\n");
+		else printf("Text1 & Text2 same time. \n");
 }
