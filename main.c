@@ -41,7 +41,7 @@ void filestat1(void)
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(void)
 {
-   stat("text2", &stat2);//text1 size,blocks 크기 저장
+   stat("text2", &stat2);// text1 size,blocks 크기 저장
    printf("text2 size: %d\n", (int)stat2.st_size);
    printf("text2 blocks : %d\n", (int)stat2.st_blocks);
    return;
